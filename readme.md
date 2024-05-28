@@ -17,7 +17,7 @@ docker-compose -p $project_name -f .devcontainer/docker-compose.yml down
 ```sh
 # Build and Open the project container in VSCode - development environment 
 ./start_devcontainer.sh
-./start_devcontainer.sh WebApp development
+./start_devcontainer.sh development
 ./start_devcontainer.sh WebApp dev
 
 # Build and Open the project container in VSCode - development environment 
@@ -107,4 +107,17 @@ docker images prune
 
 # Check folder size:
 du -sh *
+```
+
+### Update the remote URL
+
+```sh
+# Check the existing remote configuration:
+git remote -v
+# Update the remote URL:
+git remote set-url origin https://github.com/thesimonus/screeners.git
+# Verify the updated remote URL:
+git remote -v
+# Push your changes to the new remote repository:
+git push -u origin main
 ```
