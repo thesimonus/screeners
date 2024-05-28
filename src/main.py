@@ -16,7 +16,6 @@ app = FastAPI()
 def read_root():
     return {"Hello": "World 123"}
 
-
 @app.get("/hits")
 def read_root():
     r.set("foo", "bar")
